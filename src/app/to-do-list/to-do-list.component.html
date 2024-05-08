@@ -1,0 +1,12 @@
+
+    <input  [(ngModel)] = "input">
+<div class="example-button-row">
+  <button mat-raised-button color="primary" (click)="AgregarItem()">Agregar</button>
+</div>
+<li *ngFor="let item of lista">{{item}}</li>
+
+<!--<li *ngFor="let nombre of nombres">{{nombre}}</li>
+
+<p *ngFor="let nombre of nombres">Nombre: {{nombre.nombre}}</p>
+<p *ngFor="let edad of nombres">Nombre: {{edad.edad}}</p>-->
+<p *ngIf="nombres.length<= 0">Tu lista está vacía</p>
