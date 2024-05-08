@@ -1,0 +1,16 @@
+
+    <input [(ngModel)]="input">
+    <div class="example-button-row">
+        <button mat-raised-button color="primary" (click)="AgregarItem()">Enviar</button>
+    </div>
+    <ul>
+        <li *ngFor = "let item of Items" style="color:blue">{{item}}</li>
+    </ul>
+    <ul>
+        <!--<li *ngFor = "let item of oficina">Nombre: {{item.nombre}}</li>
+        <li *ngFor = "let item of oficina">Edad: {{item.edad}}</li>-->
+        <p *ngIf="oficina.length<=0">La lista esta vacia</p>
+    </ul>
+    <!--<p *ngFor = "let item of oficina">Nombre: {{item.nombre}}</p>
+    <p *ngFor = "let item of oficina">Edad: {{item.edad}}</p>
+    <p *ngIf="oficina.edad<=23">Esta chico</p>-->
