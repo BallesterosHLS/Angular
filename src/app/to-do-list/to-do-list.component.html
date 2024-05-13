@@ -1,12 +1,15 @@
-
-    <input  [(ngModel)] = "input">
+<!--<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Agrega un elemento" [(ngModel)] = "input">
+  </mat-form-field>
+</form>-->
+<h3>To do list</h3>
+<input [(ngModel)] = "input">
 <div class="example-button-row">
   <button mat-raised-button color="primary" (click)="AgregarItem()">Agregar</button>
 </div>
 <li *ngFor="let item of lista">{{item}}</li>
 
-<!--<li *ngFor="let nombre of nombres">{{nombre}}</li>
-
-<p *ngFor="let nombre of nombres">Nombre: {{nombre.nombre}}</p>
-<p *ngFor="let edad of nombres">Nombre: {{edad.edad}}</p>-->
+<h3>Lista de nombres</h3>
+<li *ngFor="let nombre of nombres; let i = index">{{i+1}} - Nombre: {{nombre.nombre}}, Edad: {{nombre.edad}}</li>
 <p *ngIf="nombres.length<= 0">Tu lista está vacía</p>
