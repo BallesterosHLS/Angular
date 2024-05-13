@@ -5,8 +5,13 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class PipeFechaPipe implements PipeTransform {
 
-  transform(value: unknown, ...args: unknown[]): unknown {
-    return null;
+  transform(value: string): string {
+    let original = value;
+    let palabra = "";
+    for(let i = original.length-1; i>=0; i--){
+      palabra += value[i]
+    }
+    return palabra;
   }
 
 }

@@ -15,6 +15,8 @@ export interface Area {
   styleUrls: ['./formulario.component.css'],
 })
 export class FormularioComponent {
+
+
   
   form: FormGroup;
 
@@ -28,6 +30,7 @@ export class FormularioComponent {
       fechaIngreso: [''],
     });
   }
+
 
 
   onSubmit() {
