@@ -1,0 +1,9 @@
+.example-form{
+    display: grid;
+    width: 300px;
+}
+mat-card-content{
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
