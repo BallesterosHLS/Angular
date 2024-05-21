@@ -1,0 +1,3 @@
+<h1>Componente hijo</h1>
+<p *ngFor="let item of nombreC">Nombre: {{item.nombre}} Area: <span [ngStyle]="{color: item.area == 'Diseño' ? 'red' : 'black'}">{{item.area}} </span></p>
+<button (click)="enviarDatos()">Enviar Datos</button>

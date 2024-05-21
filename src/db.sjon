@@ -1,0 +1,49 @@
+{
+  "posts": [
+    {
+      "id": "59c1",
+      "nombre": "Emilio",
+      "apellidos": "Hernández Huerta",
+      "correo": "emilio@mail.com",
+      "password": "dsdsdsd",
+      "telefono": "5515984960",
+      "area": "Diseño",
+      "pickerF": "2024-05-13T06:00:00.000Z"
+    },
+    {
+      "id": "c1ee",
+      "nombre": "Emilio2",
+      "apellidos": "Hernandez",
+      "correo": "emilio@mail.com",
+      "password": "dsdsdsd",
+      "telefono": "5515984960",
+      "area": "Diseño",
+      "pickerF": "2024-05-13T06:00:00.000Z"
+    },
+    {
+      "id": "fa28",
+      "nombre": "Juan",
+      "apellidos": "Perez",
+      "correo": "juan@gmail.com",
+      "password": "dsojdosjd",
+      "telefono": "5515984960",
+      "area": "Recursos Humanos",
+      "pickerF": "2024-05-22T06:00:00.000Z"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
