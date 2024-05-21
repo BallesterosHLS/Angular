@@ -1,6 +1,26 @@
-<mat-sidenav-container class="example-container">
-  <mat-sidenav mode="side" opened style="background-color:rgb(0, 140, 255);"> Curso Angular </mat-sidenav>
-  <mat-sidenav-content><app-formulario></app-formulario></mat-sidenav-content>
-</mat-sidenav-container>
-
-
+  <mat-toolbar color="primary">
+    <button mat-icon-button [matMenuTriggerFor]="menu" class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item [routerLink]="['Login']">
+        <mat-icon>login</mat-icon>
+        <span>Iniciar sesión</span>
+      </button>
+      <button mat-menu-item [routerLink]="['Formulario']">
+        <mat-icon>app_registration</mat-icon>
+        <span>Registrarse</span>
+      </button>
+      <button mat-menu-item [routerLink]="['Usuarios']">
+        <mat-icon>user</mat-icon>
+        <span>Usuarios</span>
+      </button>
+    </mat-menu>
+    <span>Bienvenid{{nombre}}</span>
+    <div class="divC">
+      <button mat-icon-button class="shopping-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon>shopping_cart</mat-icon>
+      </button>    
+    </div>
+  </mat-toolbar>
+<router-outlet></router-outlet>

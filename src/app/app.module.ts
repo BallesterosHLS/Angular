@@ -18,6 +18,17 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { PipeFechaPipe } from './pipe-fecha.pipe';
 import { DatePipe } from '@angular/common';
+import { MatIconModule } from '@angular/material/icon';
+import { LoginComponent } from './login/login.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import {MatMenuModule} from '@angular/material/menu';
+import { HttpClientModule } from '@angular/common/http';
+import { UsuariosComponent } from './usuarios/usuarios.component';
+import { MatListModule} from '@angular/material/list'
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatTableModule} from '@angular/material/table';
+import { ChildComponent } from './child/child.component';
+import { ParentComponent } from './parent/parent.component'
 
 @NgModule({
   declarations: [
@@ -25,6 +36,10 @@ import { DatePipe } from '@angular/common';
     ToDoListComponent,
     FormularioComponent,
     PipeFechaPipe,
+    LoginComponent,
+    UsuariosComponent,
+    ChildComponent,
+    ParentComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,6 +57,13 @@ import { DatePipe } from '@angular/common';
     MatSidenavModule,
     MatSnackBarModule,
     DatePipe,
+    MatIconModule,
+    MatToolbarModule,
+    MatMenuModule,
+    HttpClientModule,
+    MatListModule,
+    MatPaginatorModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent],

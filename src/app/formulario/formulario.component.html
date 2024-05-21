@@ -1,41 +1,45 @@
 <!--<form class="example-form" [formGroup="formG"]>-->
 
-<mat-card>
+<mat-card class="mat-Card">
   <mat-card-content>
     <form class="example-form" [formGroup]="form" (ngSubmit)="onSubmit()">
-      <mat-form-field class="example-full-width">
+      <mat-form-field class="example-full-width" appearance="outline">
         <input matInput placeholder="Nombre" type="text" id="nombre" formControlName="nombre"/>
       </mat-form-field>
-      <mat-form-field class="example-full-width">
+      <mat-form-field class="example-full-width" appearance="outline">
         <input matInput placeholder="Apellidos" type="text" id="apellidos" formControlName="apellidos"/>
-      </mat-form-field>
-      <mat-form-field class="example-full-width">
+      </mat-form-field> 
+      <mat-form-field class="example-full-width" appearance="outline">
         <input matInput placeholder="Correo" type="email" id="email" formControlName="email"/>
       </mat-form-field>
-      <mat-form-field class="example-full-width">
+      <mat-form-field class="example-full-width" appearance="outline">
+        <input matInput placeholder="Contraseña" type="password" id="password" formControlName="password"/>
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="outline">
         <input matInput placeholder="Teléfono" type="tel" id="telefono" formControlName="telefono"/>
       </mat-form-field>
-      <mat-form-field>
+      <mat-form-field appearance="outline">
         <mat-label>Área de trabajo</mat-label>
-        <mat-select formControlName="select" id="select">
-          <mat-option *ngFor="let area of areas" [value]="area.area"  >
+        <mat-select formControlName="select" id="select" >
+          <mat-option  *ngFor="let area of areas" [value]="area.area"  >
             {{ area.area }}
           </mat-option>
         </mat-select>
       </mat-form-field>
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="outline">
         <mat-label>Fecha de ingreso</mat-label>
-        <input matInput id="fechaIngreso" formControlName="fechaIngreso"  [matDatepicker]="picker">
+        <input matInput id="fechaIngreso" formControlName="fechaIngreso" [matDatepicker]="picker">
         <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
       </mat-form-field>
-      <button mat-button color="primary" type="submit" >Guardar</button>
+      <button mat-raised-button color="primary" type="submit" >Guardar</button>
     </form>
   </mat-card-content>
 </mat-card>
 
 <!--<p>{{hoy | date : 'ddMMyyyy'}}</p>-->
-<p>{{"Angular" | pipeFecha}}</p>
+<!-- <p>{{"Angular" | pipeFecha}}</p> -->
+
 
 
 

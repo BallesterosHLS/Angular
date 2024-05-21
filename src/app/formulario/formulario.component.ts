@@ -1,8 +1,9 @@
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { DatePipe } from '@angular/common';
-import { Pipe, PipeTransform } from '@angular/core';
+import { ApiService } from '../share/api.service';
+
 
 export interface Area {
   id: number;
@@ -16,27 +17,28 @@ export interface Area {
 })
 export class FormularioComponent {
 
-
-  
   form: FormGroup;
 
-  constructor(private _formBuilder: FormBuilder, private _bar:MatSnackBar) {
+  constructor(private _formBuilder: FormBuilder, 
+    private _bar:MatSnackBar, 
+    private _httpClient:HttpClient,
+    private _apiService:ApiService) 
+    {
     this.form = this._formBuilder.group({
       nombre: ['', [Validators.required]],
       apellidos: ['', [Validators.required]],
       email: [''],
+      password: ['', [Validators.required]],
       telefono: [''],
       select: [''],
       fechaIngreso: [''],
     });
   }
 
-
-
   onSubmit() {
     if (this.form.valid) {
       console.log(this.form.value);
-      //this._bar.open(Texto que se muestra, texto del botón para cerrar)
+      this._apiService.sendDataFormulario(this.form.value).subscribe(res=>{(console.log(res))});
       this._bar.open("Agregado correctamente", "Cerrar");
     } else {
       this._bar.open("Formulario incompleto", "Cerrar")
