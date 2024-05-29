@@ -28,7 +28,9 @@ import { MatListModule} from '@angular/material/list'
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule} from '@angular/material/table';
 import { ChildComponent } from './child/child.component';
-import { ParentComponent } from './parent/parent.component'
+import { ParentComponent } from './parent/parent.component';
+import { EditarComponent } from './editar/editar.component'
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -40,6 +42,7 @@ import { ParentComponent } from './parent/parent.component'
     UsuariosComponent,
     ChildComponent,
     ParentComponent,
+    EditarComponent,
   ],
   imports: [
     BrowserModule,
@@ -63,7 +66,8 @@ import { ParentComponent } from './parent/parent.component'
     HttpClientModule,
     MatListModule,
     MatPaginatorModule,
-    MatTableModule
+    MatTableModule, 
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent],

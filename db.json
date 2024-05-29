@@ -1,36 +1,34 @@
 {
   "posts": [
     {
-      "id": "1de3",
-      "nombre": "Marissa",
-      "apellidos": "Meza",
-      "email": "meza.marissa@hlsgroup.com.mx",
-      "password": "ewf",
-      "telefono": "5544829262",
-      "select": "Desarrollo",
-      "fechaIngreso": "2024-04-10T06:00:00.000Z"
-    },
-    {
-      "id": "3615",
-      "nombre": "Fernando",
+      "id": "2",
+      "nombre": "Alexis",
       "apellidos": "jsdkv",
       "email": "klcs@sjfdk.com",
       "password": "ssdk",
       "telefono": "51",
       "select": "Desarrollo",
       "fechaIngreso": "2024-04-09T06:00:00.000Z"
+    },
+    {
+      "id": "58d6",
+      "nombre": "Emilio",
+      "apellidos": "Hernández",
+      "email": "emilio@gmail.com",
+      "telefono": "5555555555",
+      "select": "Ventas"
     }
   ],
   "comments": [
     {
       "id": "1",
       "text": "a comment about post 1",
-      "postId": "1"
+      "postId": null
     },
     {
       "id": "2",
       "text": "another comment about post 1",
-      "postId": "1"
+      "postId": null
     }
   ],
   "profile": {
