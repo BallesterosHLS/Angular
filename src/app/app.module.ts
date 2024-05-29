@@ -26,6 +26,10 @@ import {MatListModule} from '@angular/material/list';
 import {MatTableModule} from '@angular/material/table';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatDialogModule} from '@angular/material/dialog';
+import { EditarComponent } from './editar/editar.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +40,8 @@ import { ChildComponent } from './child/child.component';
     LoginComponent,
     DatosComponentComponent,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    EditarComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +62,10 @@ import { ChildComponent } from './child/child.component';
     MatIconModule,
     HttpClientModule,
     MatListModule,
-    MatTableModule
+    MatTableModule,
+    MatPaginatorModule,
+    MatMenuModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,1 +1,29 @@
-<app-to-do-list>
+<mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" [matMenuTriggerFor]="menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item [routerLink]="['login']">
+        <mat-icon>login</mat-icon>
+        <span>Iniciar Sesion</span>
+      </button>
+      <button mat-menu-item [routerLink]="['formulario']">
+        <mat-icon>person_add</mat-icon>
+        <span>Registrarse</span>
+      </button>
+      <button mat-menu-item [routerLink]="['datos']">
+        <mat-icon>group</mat-icon>
+        <span>Lista de trabajadores</span>
+      </button>
+    </mat-menu>
+    <span>Bienvenid@ {{nombre}}</span>
+    <span class="example-spacer"></span>
+    <div class="container" style="margin-left: auto;">
+        <button mat-icon-button class="example-icon favorite-icon" [routerLink]="['datos']">
+            <mat-icon>group</mat-icon>
+        </button>
+        <button mat-flat-button color="primary" [routerLink]="['login']" style="margin-bottom: 10px;">Iniciar Sesión</button>
+        <button mat-flat-button color="primary" [routerLink]="['formulario']" style="margin-bottom: 10px;">Registrarse</button>
+    </div>
+  </mat-toolbar>
+<router-outlet></router-outlet>

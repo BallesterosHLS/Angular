@@ -1,0 +1,33 @@
+<mat-card class="card">
+    <mat-card-content>
+      <form class="example-form" [formGroup]="form" (ngSubmit)="onSumbit()">
+        <mat-label style="text-align: center; margin-bottom: 10px;">Actualizar</mat-label>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Id" value={{data.id}} type="text" id="id" formControlName="id" [disabled]="true"/>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder={{data.nombre}} value={{data.nombre}} type="text" id="nombre" formControlName="nombre"/>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Apellidos" type="text" value={{data.apellidos}} id="apellidos" formControlName="apellidos"/>
+        </mat-form-field> 
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Correo" type="email" id="correo" value={{data.correo}} formControlName="correo"/>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Telefono" type="tel" id="telefono" value={{data.telefono}} formControlName="telefono"/>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Area Trabajo</mat-label>
+          <mat-select id="area" formControlName = "area">
+            <mat-option *ngFor="let area of areas" [value]="area.viewValue" >
+              {{ area.viewValue }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <button mat-flat-button color="primary" type="submit">Actualizar</button>  
+      </form>
+    </mat-card-content>
+  </mat-card>
+  
+  

@@ -6,6 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { DatosComponentComponent } from './datos-component/datos-component.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { EditarComponent } from './editar/editar.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: "child",
     component: ChildComponent
+  },
+  {
+    path: "editar",
+    component: EditarComponent
   }
 ];
 
